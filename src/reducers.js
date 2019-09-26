@@ -42,7 +42,6 @@ export default (state = initialState, action) => {
             if (action.payload.DIRECTION_RIGHT) direction = 1;
             if (action.payload.DIRECTION_LEFT) direction = -1;
             const { columnIndex, cardIndex } = action.payload;
-            console.log(action.payload);
             const columns = [...state.columns];
             const [card] = columns[columnIndex].cards.splice(cardIndex, 1);
             columns[columnIndex + direction].cards.push(card);
